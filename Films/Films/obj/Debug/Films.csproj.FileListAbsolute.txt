@@ -1,0 +1,9 @@
+D:\Projects\ThirdLab\Films\Films\bin\Debug\Films.exe.config
+D:\Projects\ThirdLab\Films\Films\bin\Debug\Films.exe
+D:\Projects\ThirdLab\Films\Films\bin\Debug\Films.pdb
+D:\Projects\ThirdLab\Films\Films\obj\Debug\Films.csprojResolveAssemblyReference.cache
+D:\Projects\ThirdLab\Films\Films\obj\Debug\Films.Form1.resources
+D:\Projects\ThirdLab\Films\Films\obj\Debug\Films.Properties.Resources.resources
+D:\Projects\ThirdLab\Films\Films\obj\Debug\Films.csproj.GenerateResource.Cache
+D:\Projects\ThirdLab\Films\Films\obj\Debug\Films.exe
+D:\Projects\ThirdLab\Films\Films\obj\Debug\Films.pdb
