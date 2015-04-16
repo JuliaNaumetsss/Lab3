@@ -12,5 +12,6 @@ namespace Films
         public int year;
         public string director;
         public string producer;
+        public string feature;
     }
 }
