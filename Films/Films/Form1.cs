@@ -189,8 +189,55 @@ namespace Films
 
         private void FictionButton_Click(object sender, EventArgs e)
         {
-           // comboBoxFiction.Visible = true;
-            this.Name = comboBoxFiction.SelectedItem.ToString();
+            Fiction current = new Fiction();
+            if (comboBoxFiction.SelectedItem == null)
+                MessageBox.Show("Выберете фильм");
+            else
+            {
+                comboBoxThriller.SelectedItem = null;
+                comboBoxMelodrama.SelectedItem = null;
+                comboBoxCartoon.SelectedItem = null;
+                current.name = comboBoxFiction.SelectedItem.ToString();
+                if (current.name == "Интерстеллар")
+                {
+                    pictureBox1.ImageLocation = "";
+                    listBox1.Items.Clear();
+                    current.year = 2014;
+                    current.voiceOfTheFilm = "Мэттью Макконахи, Энн Хэтэуэй";
+                    current.boxOffice = "672 млн";
+                    current.director = "Кристофер Нолан";
+                    current.producer = "Кристофер Нолан, Эмма Томас, Линда Обст";
+                    current.feature = "Фантастика";
+                    pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/interstellar.jpg";
+                }
+                if (current.name == "Путешествие к центру земли")
+                {
+                    pictureBox1.ImageLocation = "";
+                    listBox1.Items.Clear();
+                    current.year = 2008;
+                    current.voiceOfTheFilm = "Брендан Фрэйзер, Джош Хатчерсон, Анита Брием";
+                    current.boxOffice = "241 млн";
+                    current.director = "Эрик Бревиг";
+                    current.producer = "Брендан Фрэйзер";
+                    current.feature = "Фантастика";
+                    pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/center.jpg";
+                }
+                if (current.name == "Голодные игры")
+                {
+                    pictureBox1.ImageLocation = "";
+                    listBox1.Items.Clear();
+                    current.year = 2014;
+                    current.voiceOfTheFilm = "Дженнифер Лоуренс, Джош Хатчерсон, Лиам Хемсворт";
+                    current.boxOffice = "751 млн";
+                    current.director = "Френсис Лоуренс";
+                    current.producer = "Нина Джейкобсон, Джон Килик";
+                    current.feature = "Фантастика";
+                    pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/game.jpg";
+                }
+                Information(current);
+                listBox1.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
+                listBox1.Items.Add("Кассовые сборы: " + current.boxOffice);
+            }
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
