@@ -215,7 +215,6 @@ namespace Films
 
         private void FictionButton_Click(object sender, EventArgs e)
         {
-
             Fiction current = new Fiction();
             if (comboBoxFiction.SelectedItem == null)
                 MessageBox.Show("Выберете фильм");
@@ -274,41 +273,27 @@ namespace Films
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             Film current = new Film();
-            if (comboBoxThriller.SelectedItem != null)
-            {
-                int index = listOfThrillers.Count - 1;
-            }
-            if (comboBoxMelodrama != null)
-            {
+           // current = listOfFiilms.FindLast(listOfFiilms.);
 
-            }
-            if (comboBoxFiction != null)
-            {
-
-            }
-            if(comboBoxCartoon != null)
-            {
-
-            }
+            //current.name = 
         }
 
         private void objectsProperty_Click(object sender, EventArgs e)
         {
-            int number = 0;
             informationBox.Items.Clear();
             foreach(Cartoons current in listOfCartoons)
             {
-                number++;
-                informationBox.Items.Add("Объект номер" + number);
-                Information2(current);
-                informationBox.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
-                informationBox.Items.Add("Актёры: " + current.duration);
+                informationBox.Items.Add("Объект номер");
+                
+                    Information2(current);
+                    informationBox.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
+                    informationBox.Items.Add("Актёры: " + current.duration);
                       
             }
             foreach (Fiction current in listOfFictions)
             {
-                number++;
-                informationBox.Items.Add("Объект номер" + number);
+                informationBox.Items.Add("Объект номер");
+
                 Information2(current);
                 informationBox.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
                 informationBox.Items.Add("Кассовые сборы: " + current.boxOffice);
@@ -316,8 +301,8 @@ namespace Films
             }
             foreach (Melodrama current in listOfMelodrams)
             {
-                number++;
-                informationBox.Items.Add("Объект номер" + number);
+                informationBox.Items.Add("Объект номер");
+
                 Information2(current);
                 informationBox.Items.Add("Количество частей: " + current.countOfPart);
                 informationBox.Items.Add("Актёры: " + current.actors);
@@ -325,8 +310,8 @@ namespace Films
             }
             foreach (Thriller current in listOfThrillers)
             {
-                number++;
-                informationBox.Items.Add("Объект номер"+number);
+                informationBox.Items.Add("Объект номер");
+
                 Information2(current);
                 informationBox.Items.Add("Количество частей: " + current.budget);
                 informationBox.Items.Add("Актёры: " + current.actors);
