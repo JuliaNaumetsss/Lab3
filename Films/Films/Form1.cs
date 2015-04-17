@@ -270,25 +270,80 @@ namespace Films
                 listOfFictions.Add(current);
             }
         }
-
+        private void editFunction(Film current)
+        {
+            if (textBoxYear.Text != "")
+                current.year = Convert.ToInt32(textBoxYear.Text);
+            if (textBoxProducer.Text != "")
+                current.producer = textBoxProducer.Text;
+            if (textBoxDirector.Text != "")
+                current.director = textBoxDirector.Text;
+            if (textBoxPath.Text != "")
+                pictureBox1.ImageLocation = @textBoxPath.Text;
+        }
+        private void cleanFunction()
+        {
+            textBoxYear.Text = "";
+            textBoxProducer.Text = "";
+            textBoxPath.Text = "";
+            textBoxDirector.Text = "";
+        }
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            Film current = new Film();
+            int x;
+            if (textBoxYear.Text != "")
+            {
+                x = Convert.ToInt32(textBoxYear.Text);
+                if (x > 2015 || x < 1900)
+                    MessageBox.Show("Введите год в диапазоне от 1900 до 2015");
+            }
             if (comboBoxThriller.SelectedItem != null)
             {
-                int index = listOfThrillers.Count - 1;
+                Thriller current = new Thriller();
+                current = listOfThrillers[listOfThrillers.Count-1];
+                editFunction(current);
+                listBox1.Items.Add("-------------------------------");
+                Information(current);
+                listBox1.Items.Add("Бюджет: " + current.budget);
+                listBox1.Items.Add("Актёры: " + current.actors);
+                listBox1.Items.Add("ОБЪЕКТ КЛАССА ТРИЛЛЕР ИЗМЕНЁН");
+                cleanFunction();
             }
-            if (comboBoxMelodrama != null)
+            if (comboBoxMelodrama.SelectedItem != null)
             {
-
+                Melodrama current = new Melodrama();
+                current = listOfMelodrams[listOfMelodrams.Count - 1];
+                editFunction(current);
+                listBox1.Items.Add("-------------------------------");
+                Information(current);
+                listBox1.Items.Add("Количество частей: " + current.countOfPart);
+                listBox1.Items.Add("Актёры: " + current.actors);
+                listBox1.Items.Add("ОБЪЕКТ КЛАССА МЕЛОДРАМА ИЗМЕНЁН");
+                cleanFunction();
             }
-            if (comboBoxFiction != null)
+            if (comboBoxFiction.SelectedItem != null)
             {
-
+                Fiction current = new Fiction();
+                current = listOfFictions[listOfFictions.Count - 1];
+                editFunction(current);
+                listBox1.Items.Add("-------------------------------");
+                Information(current);
+                listBox1.Items.Add("Кассовый сбор: " + current.boxOffice);
+                listBox1.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
+                listBox1.Items.Add("ОБЪЕКТ КЛАССА ФАНТАСТИКА ИЗМЕНЁН");
+                cleanFunction();
             }
-            if(comboBoxCartoon != null)
+            if(comboBoxCartoon.SelectedItem != null)
             {
-
+                Cartoons current = new Cartoons();
+                current = listOfCartoons[listOfCartoons.Count - 1];
+                editFunction(current);
+                listBox1.Items.Add("-------------------------------");
+                Information(current);
+                listBox1.Items.Add("Продолжительность: " + current.duration);
+                listBox1.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
+                listBox1.Items.Add("ОБЪЕКТ КЛАССА МУЛЬТФИЛЬМ ИЗМЕНЁН");
+                cleanFunction();
             }
         }
 
@@ -303,6 +358,7 @@ namespace Films
                 Information2(current);
                 informationBox.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
                 informationBox.Items.Add("Актёры: " + current.duration);
+                informationBox.Items.Add("-----------------------------------");
                       
             }
             foreach (Fiction current in listOfFictions)
@@ -312,6 +368,7 @@ namespace Films
                 Information2(current);
                 informationBox.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
                 informationBox.Items.Add("Кассовые сборы: " + current.boxOffice);
+                informationBox.Items.Add("-----------------------------------");
 
             }
             foreach (Melodrama current in listOfMelodrams)
@@ -321,6 +378,7 @@ namespace Films
                 Information2(current);
                 informationBox.Items.Add("Количество частей: " + current.countOfPart);
                 informationBox.Items.Add("Актёры: " + current.actors);
+                informationBox.Items.Add("-----------------------------------");
 
             }
             foreach (Thriller current in listOfThrillers)
@@ -330,8 +388,34 @@ namespace Films
                 Information2(current);
                 informationBox.Items.Add("Количество частей: " + current.budget);
                 informationBox.Items.Add("Актёры: " + current.actors);
-
+                informationBox.Items.Add("-----------------------------------");
             }
+        }
+
+        private void checkSymbols(KeyPressEventArgs e)
+        {
+            if ((!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), @"\d")) && e.KeyChar != 8)
+                e.Handled = true;
+        }
+        private void textBoxYear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            checkSymbols(e);
+        }
+        private void textBoxYear_TextChanged(object sender, EventArgs e)
+        {
+
+            textBoxYear.MaxLength = 4;
+
+        }
+
+        private void textBoxProducer_TextChanged(object sender, EventArgs e)
+        {
+            textBoxProducer.MaxLength = 30;
+        }
+
+        private void textBoxDirector_TextChanged(object sender, EventArgs e)
+        {
+            textBoxDirector.MaxLength = 30;
         }
     }
 }

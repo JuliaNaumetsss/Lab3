@@ -235,6 +235,7 @@
             this.textBoxDirector.Name = "textBoxDirector";
             this.textBoxDirector.Size = new System.Drawing.Size(100, 20);
             this.textBoxDirector.TabIndex = 3;
+            this.textBoxDirector.TextChanged += new System.EventHandler(this.textBoxDirector_TextChanged);
             // 
             // textBoxProducer
             // 
@@ -242,6 +243,7 @@
             this.textBoxProducer.Name = "textBoxProducer";
             this.textBoxProducer.Size = new System.Drawing.Size(81, 20);
             this.textBoxProducer.TabIndex = 2;
+            this.textBoxProducer.TextChanged += new System.EventHandler(this.textBoxProducer_TextChanged);
             // 
             // textBoxYear
             // 
@@ -249,6 +251,8 @@
             this.textBoxYear.Name = "textBoxYear";
             this.textBoxYear.Size = new System.Drawing.Size(50, 20);
             this.textBoxYear.TabIndex = 1;
+            this.textBoxYear.TextChanged += new System.EventHandler(this.textBoxYear_TextChanged);
+            this.textBoxYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxYear_KeyPress);
             // 
             // labelEdit
             // 
@@ -281,7 +285,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 457);
+            this.ClientSize = new System.Drawing.Size(928, 468);
             this.Controls.Add(this.informationBox);
             this.Controls.Add(this.objectsProperty);
             this.Controls.Add(this.panel1);
