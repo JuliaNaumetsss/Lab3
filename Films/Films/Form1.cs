@@ -443,5 +443,73 @@ namespace Films
                 formatter3.Serialize(fs, listOfMelodrams);
             }
         }
+
+        private void Deserialization_Click(object sender, EventArgs e)
+        {
+            int num = 0;
+            XmlSerializer formatter = new XmlSerializer(typeof(List<Cartoons>));
+            using (FileStream fs = new FileStream("cartoons.xml", FileMode.OpenOrCreate))
+            {
+                List<Cartoons> listOfCartoons  = (List<Cartoons>)formatter.Deserialize(fs);
+                foreach (Cartoons current in listOfCartoons)
+                {
+                    num++;
+                    informationBox.Items.Add("Объект номер" + num);
+                    Information2(current);
+                    informationBox.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
+                    informationBox.Items.Add("Актёры: " + current.duration);
+                    informationBox.Items.Add("-----------------------------------");
+
+                }
+            }
+        }
+
+        private void DeleteObject_Click(object sender, EventArgs e)
+        {
+            int i;
+            bool flagFind = false;
+            //Melodrama film = new Melodrama();
+           //film =  listOfMelodrams.Find(item => item.name == objectBox.Text);
+           i = listOfMelodrams.FindIndex(item => item.name == objectBox.Text);
+           if (i > -1)
+           {
+               listOfMelodrams.Remove(listOfMelodrams[i]);
+               flagFind = true;
+               MessageBox.Show("Фильм" + objectBox.Text+ "  удалён");
+           }
+            if(!flagFind)
+            {
+                i = listOfFictions.FindIndex(item => item.name == objectBox.Text);
+                if (i > -1)
+                {
+                    listOfFictions.Remove(listOfFictions[i]);
+                    flagFind = true;
+                    MessageBox.Show("Фильм" + objectBox.Text + "  удалён");
+                }
+            }
+            if(!flagFind)
+            {
+                i = listOfCartoons.FindIndex(item => item.name == objectBox.Text);
+                if (i > -1)
+                {
+                    listOfCartoons.Remove(listOfCartoons[i]);
+                    flagFind = true;
+                    MessageBox.Show("Фильм" + objectBox.Text + "  удалён");
+                }
+            }
+            if(!flagFind)
+            {
+                i = listOfThrillers.FindIndex(item => item.name == objectBox.Text);
+                if (i > -1)
+                {
+                    listOfThrillers.Remove(listOfThrillers[i]);
+                    flagFind = true;
+                    MessageBox.Show("Фильм" + objectBox.Text + "  удалён");
+                }
+            }
+            if(!flagFind)
+                MessageBox.Show("Фильма с таким названием в списке нет");
+
+        }
     }
 }

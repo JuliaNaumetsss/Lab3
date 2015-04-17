@@ -52,6 +52,9 @@
             this.objectsProperty = new System.Windows.Forms.Button();
             this.informationBox = new System.Windows.Forms.ListBox();
             this.Serialization = new System.Windows.Forms.Button();
+            this.Deserialization = new System.Windows.Forms.Button();
+            this.DeleteObject = new System.Windows.Forms.Button();
+            this.objectBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -174,12 +177,12 @@
             this.panel1.Controls.Add(this.labelEdit);
             this.panel1.Location = new System.Drawing.Point(12, 275);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(400, 170);
+            this.panel1.Size = new System.Drawing.Size(400, 130);
             this.panel1.TabIndex = 10;
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(125, 128);
+            this.buttonEdit.Location = new System.Drawing.Point(125, 95);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(136, 23);
             this.buttonEdit.TabIndex = 9;
@@ -284,19 +287,49 @@
             // 
             // Serialization
             // 
-            this.Serialization.Location = new System.Drawing.Point(815, 368);
+            this.Serialization.Location = new System.Drawing.Point(815, 344);
             this.Serialization.Name = "Serialization";
-            this.Serialization.Size = new System.Drawing.Size(111, 36);
+            this.Serialization.Size = new System.Drawing.Size(101, 36);
             this.Serialization.TabIndex = 13;
             this.Serialization.Text = "Сериализация";
             this.Serialization.UseVisualStyleBackColor = true;
             this.Serialization.Click += new System.EventHandler(this.Serialization_Click);
+            // 
+            // Deserialization
+            // 
+            this.Deserialization.Location = new System.Drawing.Point(815, 413);
+            this.Deserialization.Name = "Deserialization";
+            this.Deserialization.Size = new System.Drawing.Size(101, 32);
+            this.Deserialization.TabIndex = 14;
+            this.Deserialization.Text = "Десериализация";
+            this.Deserialization.UseVisualStyleBackColor = true;
+            this.Deserialization.Click += new System.EventHandler(this.Deserialization_Click);
+            // 
+            // DeleteObject
+            // 
+            this.DeleteObject.Location = new System.Drawing.Point(306, 433);
+            this.DeleteObject.Name = "DeleteObject";
+            this.DeleteObject.Size = new System.Drawing.Size(75, 23);
+            this.DeleteObject.TabIndex = 15;
+            this.DeleteObject.Text = "Удалить";
+            this.DeleteObject.UseVisualStyleBackColor = true;
+            this.DeleteObject.Click += new System.EventHandler(this.DeleteObject_Click);
+            // 
+            // objectBox
+            // 
+            this.objectBox.Location = new System.Drawing.Point(36, 433);
+            this.objectBox.Name = "objectBox";
+            this.objectBox.Size = new System.Drawing.Size(224, 20);
+            this.objectBox.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 468);
+            this.Controls.Add(this.objectBox);
+            this.Controls.Add(this.DeleteObject);
+            this.Controls.Add(this.Deserialization);
             this.Controls.Add(this.Serialization);
             this.Controls.Add(this.informationBox);
             this.Controls.Add(this.objectsProperty);
@@ -317,6 +350,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -346,6 +380,9 @@
         private System.Windows.Forms.Button objectsProperty;
         private System.Windows.Forms.ListBox informationBox;
         private System.Windows.Forms.Button Serialization;
+        private System.Windows.Forms.Button Deserialization;
+        private System.Windows.Forms.Button DeleteObject;
+        private System.Windows.Forms.TextBox objectBox;
     }
 }
 

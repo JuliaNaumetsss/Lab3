@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
-<ArrayOfMelodrama xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Melodrama>
-    <name>Золушка</name>
-    <year>2015</year>
-    <director>Кеннет Брана</director>
-    <producer>Саймон Кинберг, Дэвид Баррон</producer>
+<ArrayOfMelodrama xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />  <Melodrama>
+    <name>Дневники вампира</name>
+    <year>2009</year>
+    <director>Джули Плек</director>
+    <producer>Майкл Саби</producer>
     <feature>Мелодрама</feature>
-    <actors>Лили Джеймс, Ричард Мэдден, Хелена Бонэм Картер</actors>
-    <countOfPart>1</countOfPart>
+    <actors>Нина Добрев, Пол Уэсли, Йен Сомерхолдер</actors>
+    <countOfPart>6</countOfPart>
   </Melodrama>
+</ArrayOfMelodrama>  </Melodrama>
 </ArrayOfMelodrama>
