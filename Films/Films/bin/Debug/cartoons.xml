@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ArrayOfCartoons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Cartoons>
+    <name>Гадкий я</name>
+    <year>2010</year>
+    <director>Пьер Коффин, Крис Рено</director>
+    <producer>Джон Коэн, Крис Меледандри, Джанет Хили</producer>
+    <feature>Мультфильм</feature>
+    <voiceOfTheFilm>Стив Карелл, Джейсон Сигел, Джули Эндрюс</voiceOfTheFilm>
+    <duration>95 мин</duration>
+  </Cartoons>
+</ArrayOfCartoons>

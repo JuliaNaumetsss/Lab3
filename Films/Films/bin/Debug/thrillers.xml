@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ArrayOfThriller xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Thriller>
+    <name>Остров проклятых</name>
+    <year>2010</year>
+    <director>Мартин Скорсезе</director>
+    <producer>Майк Медавой</producer>
+    <feature>Триллер</feature>
+    <actors>Леонардо Ди Каприо, Марк Руффало,Эмили Мортимер</actors>
+    <budget>80 млн</budget>
+  </Thriller>
+</ArrayOfThriller>

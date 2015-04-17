@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Films
 {
@@ -416,6 +418,30 @@ namespace Films
         private void textBoxDirector_TextChanged(object sender, EventArgs e)
         {
             textBoxDirector.MaxLength = 30;
+        }
+
+        private void Serialization_Click(object sender, EventArgs e)
+        {
+            XmlSerializer formatter = new XmlSerializer(typeof(List<Cartoons>));
+            using (FileStream fs = new FileStream("cartoons.xml", FileMode.OpenOrCreate))
+            {
+                formatter.Serialize(fs, listOfCartoons);
+            }
+            XmlSerializer formatter1 = new XmlSerializer(typeof(List<Fiction>));
+            using (FileStream fs = new FileStream("fictions.xml", FileMode.OpenOrCreate))
+            {
+                formatter1.Serialize(fs, listOfFictions);
+            }
+            XmlSerializer formatter2 = new XmlSerializer(typeof(List<Thriller>));
+            using (FileStream fs = new FileStream("thrillers.xml", FileMode.OpenOrCreate))
+            {
+                formatter2.Serialize(fs, listOfThrillers);
+            }
+            XmlSerializer formatter3 = new XmlSerializer(typeof(List<Melodrama>));
+            using (FileStream fs = new FileStream("melodrams.xml", FileMode.OpenOrCreate))
+            {
+                formatter3.Serialize(fs, listOfMelodrams);
+            }
         }
     }
 }

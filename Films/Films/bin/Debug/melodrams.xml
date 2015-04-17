@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ArrayOfMelodrama xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Melodrama>
+    <name>Золушка</name>
+    <year>2015</year>
+    <director>Кеннет Брана</director>
+    <producer>Саймон Кинберг, Дэвид Баррон</producer>
+    <feature>Мелодрама</feature>
+    <actors>Лили Джеймс, Ричард Мэдден, Хелена Бонэм Картер</actors>
+    <countOfPart>1</countOfPart>
+  </Melodrama>
+</ArrayOfMelodrama>
