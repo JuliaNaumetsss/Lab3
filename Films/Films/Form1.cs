@@ -58,7 +58,7 @@ namespace Films
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
                     current.year = 2010;
-                    current.budget = "80 млн";
+                    current.setBudget("80 млн");
                     current.actors = "Леонардо Ди Каприо, Марк Руффало,Эмили Мортимер";
                     current.director = "Мартин Скорсезе";
                     current.producer = "Майк Медавой";
@@ -70,7 +70,7 @@ namespace Films
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
                     current.year = 2010;
-                    current.budget = "160 млн";
+                    current.setBudget("160 млн");
                     current.actors = "Леонардо Ди Каприо, Эллен Пейдж, Джозеф Гордон-Левитт";
                     current.director = "Кристофер Нолан";
                     current.producer = "Кристофер Нолан, Эмма Томас";
@@ -82,7 +82,7 @@ namespace Films
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
                     current.year = 2004;
-                    current.budget = "27 млн";
+                    current.setBudget("27 млн");
                     current.actors = "Кристиан Слэйтер, Кэтрин Моррис, Джонни Ли Миллер";
                     current.director = "Ренни Харлин";
                     current.producer = "Мориц Борман, Кэри Брокау";
@@ -91,7 +91,7 @@ namespace Films
                 }
                 countOfObjects++;
                 Information(current);
-                listBox1.Items.Add("Бюджет: " + current.budget);
+                listBox1.Items.Add("Бюджет: " + current.getBudget());
                 listBox1.Items.Add("Актёры: " + current.actors);
                 listBox1.Items.Add("Объект класса ТРИЛЛЕР создан");
                 listBox1.Items.Add("Количество созданных объектов" + countOfObjects.ToString());
@@ -115,7 +115,7 @@ namespace Films
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
                     current.year = 2015;
-                    current.countOfPart = 1;
+                    current.setCountOfPart(1);
                     current.actors = "Лили Джеймс, Ричард Мэдден, Хелена Бонэм Картер";
                     current.director = "Кеннет Брана";
                     current.producer = "Саймон Кинберг, Дэвид Баррон";
@@ -127,7 +127,7 @@ namespace Films
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
                     current.year = 2009;
-                    current.countOfPart = 6;
+                    current.setCountOfPart(6);
                     current.actors = "Нина Добрев, Пол Уэсли, Йен Сомерхолдер";
                     current.director = "Джули Плек";
                     current.producer = "Майкл Саби";
@@ -139,7 +139,7 @@ namespace Films
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
                     current.year = 2014;
-                    current.countOfPart = 1;
+                    current.setCountOfPart(1);
                     current.actors = "Эдди Редмэйн, Фелисити Джонс";
                     current.director = "Джеймс Марш";
                     current.producer = "Тим Беван, Лиза Брюс, Эрик Феллнер";
@@ -147,7 +147,7 @@ namespace Films
                     pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/stiven.jpg";
                 }
                 Information(current);
-                listBox1.Items.Add("Количество частей: " + current.countOfPart);
+                listBox1.Items.Add("Количество частей: " + current.getCountOfPart());
                 listBox1.Items.Add("Актёры: " + current.actors);
                 countOfObjects++;
                 listBox1.Items.Add("Объект класса МЕЛОДРАМА создан");
@@ -175,7 +175,7 @@ namespace Films
                     listBox1.Items.Clear();
                     current.year = 2010;
                     current.voiceOfTheFilm = "Стив Карелл, Джейсон Сигел, Джули Эндрюс";
-                    current.duration = "95 мин";
+                    current.setDuration("95 мин");
                     current.director = "Пьер Коффин, Крис Рено";
                     current.producer = "Джон Коэн, Крис Меледандри, Джанет Хили";
                     current.feature = "Мультфильм";
@@ -187,7 +187,7 @@ namespace Films
                     listBox1.Items.Clear();
                     current.year = 2010;
                     current.voiceOfTheFilm = "Джей Барушель, Америка Феррера, Джерард Батлер";
-                    current.duration = "98 мин";
+                    current.setDuration("98 мин");
                     current.director = "Крис Сандерс, Дин Деблуа";
                     current.producer = "Бонни Арнольд";
                     current.feature = "Мультфильм";
@@ -199,7 +199,7 @@ namespace Films
                     listBox1.Items.Clear();
                     current.year = 2013;
                     current.voiceOfTheFilm = "Кристен Белл, Идина Мензел, Джонатан Грофф";
-                    current.duration = "102 мин";
+                    current.setDuration("102 мин");
                     current.director = "Крис Бак, Дженнифер Ли";
                     current.producer = "Питер Дель Вечо, Джон Лассетер";
                     current.feature = "Мультфильм";
@@ -207,7 +207,7 @@ namespace Films
                 }
                 Information(current);
                 listBox1.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
-                listBox1.Items.Add("Длительность: " + current.duration);
+                listBox1.Items.Add("Длительность: " + current.getDuration());
                 countOfObjects++;
                 listBox1.Items.Add("Объект класса МУЛЬТФИЛЬМ создан");
                 listBox1.Items.Add("Количество созданных объектов" + countOfObjects.ToString());
@@ -233,7 +233,7 @@ namespace Films
                     listBox1.Items.Clear();
                     current.year = 2014;
                     current.voiceOfTheFilm = "Мэттью Макконахи, Энн Хэтэуэй";
-                    current.boxOffice = "672 млн";
+                    current.setBoxOffice("672 млн");
                     current.director = "Кристофер Нолан";
                     current.producer = "Кристофер Нолан, Эмма Томас, Линда Обст";
                     current.feature = "Фантастика";
@@ -245,7 +245,7 @@ namespace Films
                     listBox1.Items.Clear();
                     current.year = 2008;
                     current.voiceOfTheFilm = "Брендан Фрэйзер, Джош Хатчерсон, Анита Брием";
-                    current.boxOffice = "241 млн";
+                    current.setBoxOffice("241 млн");
                     current.director = "Эрик Бревиг";
                     current.producer = "Брендан Фрэйзер";
                     current.feature = "Фантастика";
@@ -257,7 +257,7 @@ namespace Films
                     listBox1.Items.Clear();
                     current.year = 2014;
                     current.voiceOfTheFilm = "Дженнифер Лоуренс, Джош Хатчерсон, Лиам Хемсворт";
-                    current.boxOffice = "751 млн";
+                    current.setBoxOffice("751 млн");
                     current.director = "Френсис Лоуренс";
                     current.producer = "Нина Джейкобсон, Джон Килик";
                     current.feature = "Фантастика";
@@ -265,7 +265,7 @@ namespace Films
                 }
                 Information(current);
                 listBox1.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
-                listBox1.Items.Add("Кассовые сборы: " + current.boxOffice);
+                listBox1.Items.Add("Кассовые сборы: " + current.getBoxOffice());
                 countOfObjects++;
                 listBox1.Items.Add("Объект класса ФАНТАСТИКА создан");
                 listBox1.Items.Add("Количество созданных объектов" + countOfObjects.ToString());
@@ -306,7 +306,7 @@ namespace Films
                 editFunction(current);
                 listBox1.Items.Add("-------------------------------");
                 Information(current);
-                listBox1.Items.Add("Бюджет: " + current.budget);
+                listBox1.Items.Add("Бюджет: " + current.getBudget());
                 listBox1.Items.Add("Актёры: " + current.actors);
                 listBox1.Items.Add("ОБЪЕКТ КЛАССА ТРИЛЛЕР ИЗМЕНЁН");
                 cleanFunction();
@@ -318,7 +318,7 @@ namespace Films
                 editFunction(current);
                 listBox1.Items.Add("-------------------------------");
                 Information(current);
-                listBox1.Items.Add("Количество частей: " + current.countOfPart);
+                listBox1.Items.Add("Количество частей: " + current.getCountOfPart());
                 listBox1.Items.Add("Актёры: " + current.actors);
                 listBox1.Items.Add("ОБЪЕКТ КЛАССА МЕЛОДРАМА ИЗМЕНЁН");
                 cleanFunction();
@@ -330,7 +330,7 @@ namespace Films
                 editFunction(current);
                 listBox1.Items.Add("-------------------------------");
                 Information(current);
-                listBox1.Items.Add("Кассовый сбор: " + current.boxOffice);
+                listBox1.Items.Add("Кассовый сбор: " + current.getBoxOffice());
                 listBox1.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
                 listBox1.Items.Add("ОБЪЕКТ КЛАССА ФАНТАСТИКА ИЗМЕНЁН");
                 cleanFunction();
@@ -342,7 +342,7 @@ namespace Films
                 editFunction(current);
                 listBox1.Items.Add("-------------------------------");
                 Information(current);
-                listBox1.Items.Add("Продолжительность: " + current.duration);
+                listBox1.Items.Add("Продолжительность: " + current.getDuration());
                 listBox1.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
                 listBox1.Items.Add("ОБЪЕКТ КЛАССА МУЛЬТФИЛЬМ ИЗМЕНЁН");
                 cleanFunction();
@@ -359,7 +359,7 @@ namespace Films
                 informationBox.Items.Add("Объект номер" + number);
                 Information2(current);
                 informationBox.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
-                informationBox.Items.Add("Актёры: " + current.duration);
+                informationBox.Items.Add("Актёры: " + current.getDuration());
                 informationBox.Items.Add("-----------------------------------");
                       
             }
@@ -369,7 +369,7 @@ namespace Films
                 informationBox.Items.Add("Объект номер" + number);
                 Information2(current);
                 informationBox.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
-                informationBox.Items.Add("Кассовые сборы: " + current.boxOffice);
+                informationBox.Items.Add("Кассовые сборы: " + current.getBoxOffice());
                 informationBox.Items.Add("-----------------------------------");
 
             }
@@ -378,7 +378,7 @@ namespace Films
                 number++;
                 informationBox.Items.Add("Объект номер" + number);
                 Information2(current);
-                informationBox.Items.Add("Количество частей: " + current.countOfPart);
+                informationBox.Items.Add("Количество частей: " + current.getCountOfPart());
                 informationBox.Items.Add("Актёры: " + current.actors);
                 informationBox.Items.Add("-----------------------------------");
 
@@ -388,7 +388,7 @@ namespace Films
                 number++;
                 informationBox.Items.Add("Объект номер"+number);
                 Information2(current);
-                informationBox.Items.Add("Количество частей: " + current.budget);
+                informationBox.Items.Add("Количество частей: " + current.getBudget());
                 informationBox.Items.Add("Актёры: " + current.actors);
                 informationBox.Items.Add("-----------------------------------");
             }
@@ -422,6 +422,10 @@ namespace Films
 
         private void Serialization_Click(object sender, EventArgs e)
         {
+            File.Delete(@"cartoons.xml");
+            File.Delete(@"fictions.xml");
+            File.Delete(@"thrillers.xml");
+            File.Delete(@"melodrams.xml");
             XmlSerializer formatter = new XmlSerializer(typeof(List<Cartoons>));
             using (FileStream fs = new FileStream("cartoons.xml", FileMode.OpenOrCreate))
             {
@@ -450,14 +454,59 @@ namespace Films
             XmlSerializer formatter = new XmlSerializer(typeof(List<Cartoons>));
             using (FileStream fs = new FileStream("cartoons.xml", FileMode.OpenOrCreate))
             {
-                List<Cartoons> listOfCartoons  = (List<Cartoons>)formatter.Deserialize(fs);
+                List<Cartoons> listOfCartoons = (List<Cartoons>)formatter.Deserialize(fs);
                 foreach (Cartoons current in listOfCartoons)
                 {
                     num++;
                     informationBox.Items.Add("Объект номер" + num);
                     Information2(current);
                     informationBox.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
-                    informationBox.Items.Add("Актёры: " + current.duration);
+                    informationBox.Items.Add("Актёры: " + current.getDuration());
+                    informationBox.Items.Add("-----------------------------------");
+
+                }
+            }
+            XmlSerializer formatter1 = new XmlSerializer(typeof(List<Fiction>));
+            using (FileStream fs = new FileStream("fictions.xml", FileMode.OpenOrCreate))
+            {
+                List<Fiction> listOfFictions  = (List<Fiction>)formatter1.Deserialize(fs);
+                foreach (Fiction current in listOfFictions)
+                {
+                    num++;
+                    informationBox.Items.Add("Объект номер" + num);
+                    Information2(current);
+                    informationBox.Items.Add("Роли озвучивали: " + current.voiceOfTheFilm);
+                    informationBox.Items.Add("Кассовые сборы: " + current.getBoxOffice());
+                    informationBox.Items.Add("-----------------------------------");
+
+                }
+            }
+            XmlSerializer formatter2 = new XmlSerializer(typeof(List<Melodrama>));
+            using (FileStream fs = new FileStream("melodrams.xml", FileMode.OpenOrCreate))
+            {
+                List<Melodrama> listOfMelodrams = (List<Melodrama>)formatter2.Deserialize(fs);
+                foreach (Melodrama current in listOfMelodrams)
+                {
+                    num++;
+                    informationBox.Items.Add("Объект номер" + num);
+                    Information2(current);
+                    informationBox.Items.Add("Количество частей: " + current.getCountOfPart());
+                    informationBox.Items.Add("Актёры: " + current.actors);
+                    informationBox.Items.Add("-----------------------------------");
+
+                }
+            }
+           XmlSerializer formatter3 = new XmlSerializer(typeof(List<Thriller>));
+            using (FileStream fs = new FileStream("thrillers.xml", FileMode.OpenOrCreate))
+            {
+                List<Thriller> listOfThrillers = (List<Thriller>)formatter3.Deserialize(fs);
+                foreach (Thriller current in listOfThrillers)
+                {
+                    num++;
+                    informationBox.Items.Add("Объект номер" + num);
+                    Information2(current);
+                    informationBox.Items.Add("Бюджет: " + current.getBudget());
+                    informationBox.Items.Add("Актёры: " + current.actors);
                     informationBox.Items.Add("-----------------------------------");
 
                 }
@@ -475,7 +524,7 @@ namespace Films
            {
                listOfMelodrams.Remove(listOfMelodrams[i]);
                flagFind = true;
-               MessageBox.Show("Фильм" + objectBox.Text+ "  удалён");
+               MessageBox.Show("Фильм " + objectBox.Text+ "  удалён");
            }
             if(!flagFind)
             {
@@ -484,7 +533,7 @@ namespace Films
                 {
                     listOfFictions.Remove(listOfFictions[i]);
                     flagFind = true;
-                    MessageBox.Show("Фильм" + objectBox.Text + "  удалён");
+                    MessageBox.Show("Фильм " + objectBox.Text + "  удалён");
                 }
             }
             if(!flagFind)
@@ -494,7 +543,7 @@ namespace Films
                 {
                     listOfCartoons.Remove(listOfCartoons[i]);
                     flagFind = true;
-                    MessageBox.Show("Фильм" + objectBox.Text + "  удалён");
+                    MessageBox.Show("Фильм " + objectBox.Text + "  удалён");
                 }
             }
             if(!flagFind)
@@ -504,7 +553,7 @@ namespace Films
                 {
                     listOfThrillers.Remove(listOfThrillers[i]);
                     flagFind = true;
-                    MessageBox.Show("Фильм" + objectBox.Text + "  удалён");
+                    MessageBox.Show("Фильм " + objectBox.Text + "  удалён");
                 }
             }
             if(!flagFind)

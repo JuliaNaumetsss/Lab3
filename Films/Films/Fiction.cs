@@ -8,10 +8,17 @@ namespace Films
 {
     public class Fiction : Children_s
     {
-        public string boxOffice;
+        private string boxOffice;
         public Fiction()
         {
-
+        }
+        public void setBoxOffice(string boxOffice)
+        {
+            this.boxOffice = boxOffice;
+        }
+        public string getBoxOffice()
+        {
+            return boxOffice;
         }
     }
 }

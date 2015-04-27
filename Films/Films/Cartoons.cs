@@ -8,9 +8,19 @@ namespace Films
 {
     public class Cartoons :Children_s
     {
-        public string duration;
+        private string duration;
         public Cartoons()
         {
+        }
+        // initilization
+        public void setDuration(string duration)
+        {
+            this.duration = duration;
+        }
+        //получение значений
+        public string getDuration()
+        {
+            return duration;
         }
     }
 }

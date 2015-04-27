@@ -8,10 +8,17 @@ namespace Films
 {
     public class Melodrama: Grown
     {
-        public int countOfPart;
+        private int countOfPart;
         public Melodrama()
+        { 
+        }
+        public void setCountOfPart(int countOfPart)
         {
-            
+            this.countOfPart = countOfPart;
+        }
+        public int getCountOfPart()
+        {
+            return countOfPart;
         }
     }
 }
