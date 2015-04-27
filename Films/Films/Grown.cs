@@ -8,9 +8,17 @@ namespace Films
 {
     public class Grown : Film
     {
-        public string actors; 
+        protected string actors; 
         public Grown()
         {
+        }
+        public void setActors(string actors)
+        {
+            this.actors = actors;
+        }
+        public string getActors()
+        {
+            return actors;
         }
     }
 }

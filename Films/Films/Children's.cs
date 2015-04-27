@@ -8,7 +8,7 @@ namespace Films
 {
     public class Children_s : Film
     {
-        public string voiceOfTheFilm;
+        protected string voiceOfTheFilm;
         public Children_s()
         {
         }
