@@ -271,7 +271,7 @@
             // 
             this.objectsProperty.Location = new System.Drawing.Point(815, 275);
             this.objectsProperty.Name = "objectsProperty";
-            this.objectsProperty.Size = new System.Drawing.Size(111, 44);
+            this.objectsProperty.Size = new System.Drawing.Size(101, 44);
             this.objectsProperty.TabIndex = 11;
             this.objectsProperty.Text = "Свойства всех обектов";
             this.objectsProperty.UseVisualStyleBackColor = true;
@@ -289,7 +289,7 @@
             // 
             this.Serialization.Location = new System.Drawing.Point(815, 344);
             this.Serialization.Name = "Serialization";
-            this.Serialization.Size = new System.Drawing.Size(111, 36);
+            this.Serialization.Size = new System.Drawing.Size(101, 36);
             this.Serialization.TabIndex = 13;
             this.Serialization.Text = "Сериализация";
             this.Serialization.UseVisualStyleBackColor = true;
@@ -299,7 +299,7 @@
             // 
             this.Deserialization.Location = new System.Drawing.Point(815, 413);
             this.Deserialization.Name = "Deserialization";
-            this.Deserialization.Size = new System.Drawing.Size(111, 32);
+            this.Deserialization.Size = new System.Drawing.Size(101, 32);
             this.Deserialization.TabIndex = 14;
             this.Deserialization.Text = "Десериализация";
             this.Deserialization.UseVisualStyleBackColor = true;
@@ -307,7 +307,7 @@
             // 
             // DeleteObject
             // 
-            this.DeleteObject.Location = new System.Drawing.Point(12, 430);
+            this.DeleteObject.Location = new System.Drawing.Point(306, 433);
             this.DeleteObject.Name = "DeleteObject";
             this.DeleteObject.Size = new System.Drawing.Size(75, 23);
             this.DeleteObject.TabIndex = 15;
@@ -317,7 +317,7 @@
             // 
             // objectBox
             // 
-            this.objectBox.Location = new System.Drawing.Point(94, 433);
+            this.objectBox.Location = new System.Drawing.Point(36, 433);
             this.objectBox.Name = "objectBox";
             this.objectBox.Size = new System.Drawing.Size(224, 20);
             this.objectBox.TabIndex = 16;

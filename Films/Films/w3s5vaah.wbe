@@ -65,28 +65,28 @@ namespace Films
                     current.Feature = "Триллер";
                     pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/ostrov.jpg";
                 }
-                if (current.Name == "Начало")
+                if (current.getName() == "Начало")
                 {
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
-                    current.Year = 2010;
+                    current.setYear(2010);
                     current.setBudget("160 млн");
                     current.setActors("Леонардо Ди Каприо, Эллен Пейдж, Джозеф Гордон-Левитт");
-                    current.Director = "Кристофер Нолан";
-                    current.Producer = "Кристофер Нолан, Эмма Томас";
-                    current.Feature = "Триллер";
+                    current.setDrector("Кристофер Нолан");
+                    current.setProducer("Кристофер Нолан, Эмма Томас");
+                    current.setFeature("Триллер");
                     pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/begin.jpg";
                 }
-                if (current.Name == "Охотники за разумом")
+                if (current.getName() == "Охотники за разумом")
                 {
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
-                    current.Year = 2004;
+                    current.setYear(2004);
                     current.setBudget("27 млн");
                     current.setActors("Кристиан Слэйтер, Кэтрин Моррис, Джонни Ли Миллер");
-                    current.Director = "Ренни Харлин";
-                    current.Producer = "Мориц Борман, Кэри Брокау";
-                    current.Feature = "Триллер";
+                    current.setDirector("Ренни Харлин");
+                    current.setProducer("Мориц Борман, Кэри Брокау");
+                    current.setFeature("Триллер");
                     pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/ohota.jpg";
                 }
                 countOfObjects++;
@@ -109,41 +109,41 @@ namespace Films
                 comboBoxThriller.SelectedItem = null;
                 comboBoxCartoon.SelectedItem = null;
                 comboBoxFiction.SelectedItem = null;
-                current.Name = comboBoxMelodrama.SelectedItem.ToString();
-                if (current.Name == "Золушка")
+                current.setName(comboBoxMelodrama.SelectedItem.ToString());
+                if (current.getName() == "Золушка")
                 {
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
-                    current.Year = 2015;
+                    current.setYear(2015);
                     current.setCountOfPart(1);
                     current.setActors("Лили Джеймс, Ричард Мэдден, Хелена Бонэм Картер");
-                    current.Director = "Кеннет Брана";
-                    current.Producer = "Саймон Кинберг, Дэвид Баррон";
-                    current.Feature = "Мелодрама";
+                    current.setDirector("Кеннет Брана");
+                    current.setProducer("Саймон Кинберг, Дэвид Баррон");
+                    current.setFeature("Мелодрама");
                     pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/cindirella.jpg";
                 }
-                if (current.Name == "Дневники вампира")
+                if (current.getName() == "Дневники вампира")
                 {
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
-                    current.Year = 2009;
+                    current.setYear(2009);
                     current.setCountOfPart(6);
                     current.setActors("Нина Добрев, Пол Уэсли, Йен Сомерхолдер");
-                    current.Director = "Джули Плек";
-                    current.Producer = "Майкл Саби";
-                    current.Feature = "Мелодрама";
+                    current.setDirector("Джули Плек");
+                    current.setProducer("Майкл Саби");
+                    current.setFeature("Мелодрама");
                     pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/vampire.jpg";
                 }
-                if (current.Name == "Вселенная Стивена Хокинга")
+                if (current.getName() == "Вселенная Стивена Хокинга")
                 {
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
-                    current.Year = 2014;
+                    current.setYear(2014);
                     current.setCountOfPart(1);
                     current.setActors("Эдди Редмэйн, Фелисити Джонс");
-                    current.Director = "Джеймс Марш";
-                    current.Producer = "Тим Беван, Лиза Брюс, Эрик Феллнер";
-                    current.Feature = "Мелодрама";
+                    current.setDirector("Джеймс Марш");
+                    current.setProducer("Тим Беван, Лиза Брюс, Эрик Феллнер");
+                    current.setFeature("Мелодрама");
                     pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/stiven.jpg";
                 }
                 Information(current);
@@ -168,41 +168,41 @@ namespace Films
                 comboBoxThriller.SelectedItem = null;
                 comboBoxMelodrama.SelectedItem = null;
                 comboBoxFiction.SelectedItem = null;
-                current.Name = comboBoxCartoon.SelectedItem.ToString();
-                if (current.Name == "Гадкий я")
+                current.setName(comboBoxCartoon.SelectedItem.ToString());
+                if (current.getName() == "Гадкий я")
                 {
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
-                    current.Year = 2010;
+                    current.setYear(2010);
                     current.VoiceOfTheFilm = "Стив Карелл, Джейсон Сигел, Джули Эндрюс";
                     current.Duration="95 мин";
-                    current.Director = "Пьер Коффин, Крис Рено";
-                    current.Producer = "Джон Коэн, Крис Меледандри, Джанет Хили";
-                    current.Feature = "Мультфильм";
+                    current.setDirector("Пьер Коффин, Крис Рено");
+                    current.setProducer("Джон Коэн, Крис Меледандри, Джанет Хили");
+                    current.setFeature("Мультфильм");
                     pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/I.jpg";
                 }
-                if (current.Name == "Как приручить дракона")
+                if (current.getName() == "Как приручить дракона")
                 {
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
-                    current.Year = 2010;
+                    current.setYear(2010);
                     current.VoiceOfTheFilm="Джей Барушель, Америка Феррера, Джерард Батлер";
                     current.Duration="98 мин";
-                    current.Director = "Крис Сандерс, Дин Деблуа";
-                    current.Producer = "Бонни Арнольд";
-                    current.Feature = "Мультфильм";
+                    current.setDirector("Крис Сандерс, Дин Деблуа");
+                    current.setProducer("Бонни Арнольд");
+                    current.setFeature("Мультфильм");
                     pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/dracon.jpg";
                 }
-                if (current.Name == "Холодное сердце")
+                if (current.getName() == "Холодное сердце")
                 {
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
-                    current.Year=2013;
+                    current.setYear(2013);
                     current.VoiceOfTheFilm = "Кристен Белл, Идина Мензел, Джонатан Грофф";
                     current.Duration="102 мин";
-                    current.Director = "Крис Бак, Дженнифер Ли";
-                    current.Producer = "Питер Дель Вечо, Джон Лассетер";
-                    current.Feature = "Мультфильм";
+                    current.setDirector("Крис Бак, Дженнифер Ли");
+                    current.setProducer("Питер Дель Вечо, Джон Лассетер");
+                    current.setFeature("Мультфильм");
                     pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/Frozen.jpg";
                 }
                 Information(current);
@@ -226,41 +226,41 @@ namespace Films
                 comboBoxThriller.SelectedItem = null;
                 comboBoxMelodrama.SelectedItem = null;
                 comboBoxCartoon.SelectedItem = null;
-                current.Name  = comboBoxFiction.SelectedItem.ToString();
-                if (current.Name == "Интерстеллар")
+                current.setName(comboBoxFiction.SelectedItem.ToString());
+                if (current.getName() == "Интерстеллар")
                 {
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
-                    current.Year = 2014;
+                    current.setYear(2014);
                     current.VoiceOfTheFilm="Мэттью Макконахи, Энн Хэтэуэй";
                     current.setBoxOffice("672 млн");
-                    current.Director = "Кристофер Нолан";
-                    current.Producer = "Кристофер Нолан, Эмма Томас, Линда Обст";
-                    current.Feature = "Фантастика";
+                    current.setDirector("Кристофер Нолан");
+                    current.setProducer("Кристофер Нолан, Эмма Томас, Линда Обст");
+                    current.setFeature("Фантастика");
                     pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/interstellar.jpg";
                 }
-                if (current.Name == "Путешествие к центру земли")
+                if (current.getName() == "Путешествие к центру земли")
                 {
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
-                    current.Year = 2008;
+                    current.setYear(2008);
                     current.VoiceOfTheFilm="Брендан Фрэйзер, Джош Хатчерсон, Анита Брием";
                     current.setBoxOffice("241 млн");
-                    current.Director = "Эрик Бревиг";
-                    current.Producer = "Брендан Фрэйзер";
-                    current.Feature = "Фантастика";
+                    current.setDirector("Эрик Бревиг");
+                    current.setProducer("Брендан Фрэйзер");
+                    current.setFeature("Фантастика");
                     pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/center.jpg";
                 }
-                if (current.Name == "Голодные игры")
+                if (current.getName() == "Голодные игры")
                 {
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
-                    current.Year = 2014;
+                    current.setYear(2014);
                     current.VoiceOfTheFilm="Дженнифер Лоуренс, Джош Хатчерсон, Лиам Хемсворт";
                     current.setBoxOffice("751 млн");
-                    current.Director = "Френсис Лоуренс";
-                    current.Producer = "Нина Джейкобсон, Джон Килик";
-                    current.Feature = "Фантастика";
+                    current.setDirector("Френсис Лоуренс");
+                    current.setProducer("Нина Джейкобсон, Джон Килик");
+                    current.setFeature("Фантастика");
                     pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/game.jpg";
                 }
                 Information(current);
@@ -275,11 +275,11 @@ namespace Films
         private void editFunction(Film current)
         {
             if (textBoxYear.Text != "")
-                current.Year = Convert.ToInt32(textBoxYear.Text);
+                current.setYear(Convert.ToInt32(textBoxYear.Text));
             if (textBoxProducer.Text != "")
-                current.Producer = textBoxProducer.Text;
+                current.setProducer(textBoxProducer.Text);
             if (textBoxDirector.Text != "")
-                current.Director = textBoxDirector.Text;
+                current.setDirector(textBoxDirector.Text);
             if (textBoxPath.Text != "")
                 pictureBox1.ImageLocation = @textBoxPath.Text;
         }
@@ -450,15 +450,11 @@ namespace Films
 
         private void Deserialization_Click(object sender, EventArgs e)
         {
-            listOfCartoons.Clear();
-            listOfFictions.Clear();
-            listOfMelodrams.Clear();
-            listOfThrillers.Clear();
             int num = 0;
             XmlSerializer formatter = new XmlSerializer(typeof(List<Cartoons>));
             using (FileStream fs = new FileStream("cartoons.xml", FileMode.OpenOrCreate))
             {
-               /* List<Cartoons> */listOfCartoons = (List<Cartoons>)formatter.Deserialize(fs);
+                List<Cartoons> listOfCartoons = (List<Cartoons>)formatter.Deserialize(fs);
                 foreach (Cartoons current in listOfCartoons)
                 {
                     num++;
@@ -473,7 +469,7 @@ namespace Films
             XmlSerializer formatter1 = new XmlSerializer(typeof(List<Fiction>));
             using (FileStream fs = new FileStream("fictions.xml", FileMode.OpenOrCreate))
             {
-                /*List<Fiction>*/ listOfFictions  = (List<Fiction>)formatter1.Deserialize(fs);
+                List<Fiction> listOfFictions  = (List<Fiction>)formatter1.Deserialize(fs);
                 foreach (Fiction current in listOfFictions)
                 {
                     num++;
@@ -488,7 +484,7 @@ namespace Films
             XmlSerializer formatter2 = new XmlSerializer(typeof(List<Melodrama>));
             using (FileStream fs = new FileStream("melodrams.xml", FileMode.OpenOrCreate))
             {
-                /*List<Melodrama>*/ listOfMelodrams = (List<Melodrama>)formatter2.Deserialize(fs);
+                List<Melodrama> listOfMelodrams = (List<Melodrama>)formatter2.Deserialize(fs);
                 foreach (Melodrama current in listOfMelodrams)
                 {
                     num++;
@@ -503,7 +499,7 @@ namespace Films
            XmlSerializer formatter3 = new XmlSerializer(typeof(List<Thriller>));
             using (FileStream fs = new FileStream("thrillers.xml", FileMode.OpenOrCreate))
             {
-                /*List<Thriller>*/ listOfThrillers = (List<Thriller>)formatter3.Deserialize(fs);
+                List<Thriller> listOfThrillers = (List<Thriller>)formatter3.Deserialize(fs);
                 foreach (Thriller current in listOfThrillers)
                 {
                     num++;
@@ -523,7 +519,7 @@ namespace Films
             bool flagFind = false;
             //Melodrama film = new Melodrama();
            //film =  listOfMelodrams.Find(item => item.name == objectBox.Text);
-           i = listOfMelodrams.FindIndex(item => item.Name == objectBox.Text);
+           i = listOfMelodrams.FindIndex(item => item.getName() == objectBox.Text);
            if (i > -1)
            {
                listOfMelodrams.Remove(listOfMelodrams[i]);
@@ -532,7 +528,7 @@ namespace Films
            }
             if(!flagFind)
             {
-                i = listOfFictions.FindIndex(item => item.Name == objectBox.Text);
+                i = listOfFictions.FindIndex(item => item.getName() == objectBox.Text);
                 if (i > -1)
                 {
                     listOfFictions.Remove(listOfFictions[i]);
@@ -542,7 +538,7 @@ namespace Films
             }
             if(!flagFind)
             {
-                i = listOfCartoons.FindIndex(item => item.Name == objectBox.Text);
+                i = listOfCartoons.FindIndex(item => item.getName() == objectBox.Text);
                 if (i > -1)
                 {
                     listOfCartoons.Remove(listOfCartoons[i]);
@@ -552,7 +548,7 @@ namespace Films
             }
             if(!flagFind)
             {
-                i = listOfThrillers.FindIndex(item => item.Name == objectBox.Text);
+                i = listOfThrillers.FindIndex(item => item.getName() == objectBox.Text);
                 if (i > -1)
                 {
                     listOfThrillers.Remove(listOfThrillers[i]);
@@ -562,7 +558,7 @@ namespace Films
             }
             if(!flagFind)
                 MessageBox.Show("Фильма с таким названием в списке нет");
-            objectBox.Text = "";
+
         }
     }
 }

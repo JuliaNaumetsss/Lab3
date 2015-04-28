@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ArrayOfThriller xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Thriller>
+    <Name>Охотники за разумом</Name>
+    <Year>2004</Year>
+    <Director>Ренни Харлин</Director>
+    <Producer>Мориц Борман, Кэри Брокау</Producer>
+    <Feature>Триллер</Feature>
+  </Thriller>
+</ArrayOfThriller>

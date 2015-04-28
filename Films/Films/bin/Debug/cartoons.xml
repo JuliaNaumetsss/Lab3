@@ -1,5 +1,12 @@
 <?xml version="1.0"?>
 <ArrayOfCartoons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Cartoons />
-  <Cartoons />
+  <Cartoons>
+    <Name>Как приручить дракона</Name>
+    <Year>2010</Year>
+    <Director>Крис Сандерс, Дин Деблуа</Director>
+    <Producer>Бонни Арнольд</Producer>
+    <Feature>Мультфильм</Feature>
+    <VoiceOfTheFilm>Джей Барушель, Америка Феррера, Джерард Батлер</VoiceOfTheFilm>
+    <Duration>98 мин</Duration>
+  </Cartoons>
 </ArrayOfCartoons>

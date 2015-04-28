@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ArrayOfMelodrama xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Melodrama>
+    <Name>Золушка</Name>
+    <Year>2015</Year>
+    <Director>Кеннет Брана</Director>
+    <Producer>Саймон Кинберг, Дэвид Баррон</Producer>
+    <Feature>Мелодрама</Feature>
+  </Melodrama>
+  <Melodrama>
+    <Name>Вселенная Стивена Хокинга</Name>
+    <Year>2014</Year>
+    <Director>Джеймс Марш</Director>
+    <Producer>Тим Беван, Лиза Брюс, Эрик Феллнер</Producer>
+    <Feature>Мелодрама</Feature>
+  </Melodrama>
+</ArrayOfMelodrama>

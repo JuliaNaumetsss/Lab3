@@ -236,31 +236,31 @@ namespace Films
                     current.setBoxOffice("672 млн");
                     current.Director = "Кристофер Нолан";
                     current.Producer = "Кристофер Нолан, Эмма Томас, Линда Обст";
-                    current.Feature = "Фантастика";
+                    current.setFeature("Фантастика");
                     pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/interstellar.jpg";
                 }
-                if (current.Name == "Путешествие к центру земли")
+                if (current.getName() == "Путешествие к центру земли")
                 {
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
-                    current.Year = 2008;
+                    current.setYear(2008);
                     current.VoiceOfTheFilm="Брендан Фрэйзер, Джош Хатчерсон, Анита Брием";
                     current.setBoxOffice("241 млн");
-                    current.Director = "Эрик Бревиг";
-                    current.Producer = "Брендан Фрэйзер";
-                    current.Feature = "Фантастика";
+                    current.setDirector("Эрик Бревиг");
+                    current.setProducer("Брендан Фрэйзер");
+                    current.setFeature("Фантастика");
                     pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/center.jpg";
                 }
-                if (current.Name == "Голодные игры")
+                if (current.getName() == "Голодные игры")
                 {
                     pictureBox1.ImageLocation = "";
                     listBox1.Items.Clear();
-                    current.Year = 2014;
+                    current.setYear(2014);
                     current.VoiceOfTheFilm="Дженнифер Лоуренс, Джош Хатчерсон, Лиам Хемсворт";
                     current.setBoxOffice("751 млн");
-                    current.Director = "Френсис Лоуренс";
-                    current.Producer = "Нина Джейкобсон, Джон Килик";
-                    current.Feature = "Фантастика";
+                    current.setDirector("Френсис Лоуренс");
+                    current.setProducer("Нина Джейкобсон, Джон Килик");
+                    current.setFeature("Фантастика");
                     pictureBox1.ImageLocation = @"D:/Projects/ThirdLab/Pictures/game.jpg";
                 }
                 Information(current);
@@ -275,11 +275,11 @@ namespace Films
         private void editFunction(Film current)
         {
             if (textBoxYear.Text != "")
-                current.Year = Convert.ToInt32(textBoxYear.Text);
+                current.setYear(Convert.ToInt32(textBoxYear.Text));
             if (textBoxProducer.Text != "")
-                current.Producer = textBoxProducer.Text;
+                current.setProducer(textBoxProducer.Text);
             if (textBoxDirector.Text != "")
-                current.Director = textBoxDirector.Text;
+                current.setDirector(textBoxDirector.Text);
             if (textBoxPath.Text != "")
                 pictureBox1.ImageLocation = @textBoxPath.Text;
         }
@@ -450,15 +450,11 @@ namespace Films
 
         private void Deserialization_Click(object sender, EventArgs e)
         {
-            listOfCartoons.Clear();
-            listOfFictions.Clear();
-            listOfMelodrams.Clear();
-            listOfThrillers.Clear();
             int num = 0;
             XmlSerializer formatter = new XmlSerializer(typeof(List<Cartoons>));
             using (FileStream fs = new FileStream("cartoons.xml", FileMode.OpenOrCreate))
             {
-               /* List<Cartoons> */listOfCartoons = (List<Cartoons>)formatter.Deserialize(fs);
+                List<Cartoons> listOfCartoons = (List<Cartoons>)formatter.Deserialize(fs);
                 foreach (Cartoons current in listOfCartoons)
                 {
                     num++;
@@ -473,7 +469,7 @@ namespace Films
             XmlSerializer formatter1 = new XmlSerializer(typeof(List<Fiction>));
             using (FileStream fs = new FileStream("fictions.xml", FileMode.OpenOrCreate))
             {
-                /*List<Fiction>*/ listOfFictions  = (List<Fiction>)formatter1.Deserialize(fs);
+                List<Fiction> listOfFictions  = (List<Fiction>)formatter1.Deserialize(fs);
                 foreach (Fiction current in listOfFictions)
                 {
                     num++;
@@ -488,7 +484,7 @@ namespace Films
             XmlSerializer formatter2 = new XmlSerializer(typeof(List<Melodrama>));
             using (FileStream fs = new FileStream("melodrams.xml", FileMode.OpenOrCreate))
             {
-                /*List<Melodrama>*/ listOfMelodrams = (List<Melodrama>)formatter2.Deserialize(fs);
+                List<Melodrama> listOfMelodrams = (List<Melodrama>)formatter2.Deserialize(fs);
                 foreach (Melodrama current in listOfMelodrams)
                 {
                     num++;
@@ -503,7 +499,7 @@ namespace Films
            XmlSerializer formatter3 = new XmlSerializer(typeof(List<Thriller>));
             using (FileStream fs = new FileStream("thrillers.xml", FileMode.OpenOrCreate))
             {
-                /*List<Thriller>*/ listOfThrillers = (List<Thriller>)formatter3.Deserialize(fs);
+                List<Thriller> listOfThrillers = (List<Thriller>)formatter3.Deserialize(fs);
                 foreach (Thriller current in listOfThrillers)
                 {
                     num++;
@@ -523,7 +519,7 @@ namespace Films
             bool flagFind = false;
             //Melodrama film = new Melodrama();
            //film =  listOfMelodrams.Find(item => item.name == objectBox.Text);
-           i = listOfMelodrams.FindIndex(item => item.Name == objectBox.Text);
+           i = listOfMelodrams.FindIndex(item => item.getName() == objectBox.Text);
            if (i > -1)
            {
                listOfMelodrams.Remove(listOfMelodrams[i]);
@@ -532,7 +528,7 @@ namespace Films
            }
             if(!flagFind)
             {
-                i = listOfFictions.FindIndex(item => item.Name == objectBox.Text);
+                i = listOfFictions.FindIndex(item => item.getName() == objectBox.Text);
                 if (i > -1)
                 {
                     listOfFictions.Remove(listOfFictions[i]);
@@ -542,7 +538,7 @@ namespace Films
             }
             if(!flagFind)
             {
-                i = listOfCartoons.FindIndex(item => item.Name == objectBox.Text);
+                i = listOfCartoons.FindIndex(item => item.getName() == objectBox.Text);
                 if (i > -1)
                 {
                     listOfCartoons.Remove(listOfCartoons[i]);
@@ -552,7 +548,7 @@ namespace Films
             }
             if(!flagFind)
             {
-                i = listOfThrillers.FindIndex(item => item.Name == objectBox.Text);
+                i = listOfThrillers.FindIndex(item => item.getName() == objectBox.Text);
                 if (i > -1)
                 {
                     listOfThrillers.Remove(listOfThrillers[i]);
@@ -562,7 +558,7 @@ namespace Films
             }
             if(!flagFind)
                 MessageBox.Show("Фильма с таким названием в списке нет");
-            objectBox.Text = "";
+
         }
     }
 }

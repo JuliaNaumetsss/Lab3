@@ -450,15 +450,11 @@ namespace Films
 
         private void Deserialization_Click(object sender, EventArgs e)
         {
-            listOfCartoons.Clear();
-            listOfFictions.Clear();
-            listOfMelodrams.Clear();
-            listOfThrillers.Clear();
             int num = 0;
             XmlSerializer formatter = new XmlSerializer(typeof(List<Cartoons>));
             using (FileStream fs = new FileStream("cartoons.xml", FileMode.OpenOrCreate))
             {
-               /* List<Cartoons> */listOfCartoons = (List<Cartoons>)formatter.Deserialize(fs);
+                List<Cartoons> listOfCartoons = (List<Cartoons>)formatter.Deserialize(fs);
                 foreach (Cartoons current in listOfCartoons)
                 {
                     num++;
@@ -473,7 +469,7 @@ namespace Films
             XmlSerializer formatter1 = new XmlSerializer(typeof(List<Fiction>));
             using (FileStream fs = new FileStream("fictions.xml", FileMode.OpenOrCreate))
             {
-                /*List<Fiction>*/ listOfFictions  = (List<Fiction>)formatter1.Deserialize(fs);
+                List<Fiction> listOfFictions  = (List<Fiction>)formatter1.Deserialize(fs);
                 foreach (Fiction current in listOfFictions)
                 {
                     num++;
@@ -488,7 +484,7 @@ namespace Films
             XmlSerializer formatter2 = new XmlSerializer(typeof(List<Melodrama>));
             using (FileStream fs = new FileStream("melodrams.xml", FileMode.OpenOrCreate))
             {
-                /*List<Melodrama>*/ listOfMelodrams = (List<Melodrama>)formatter2.Deserialize(fs);
+                List<Melodrama> listOfMelodrams = (List<Melodrama>)formatter2.Deserialize(fs);
                 foreach (Melodrama current in listOfMelodrams)
                 {
                     num++;
@@ -503,7 +499,7 @@ namespace Films
            XmlSerializer formatter3 = new XmlSerializer(typeof(List<Thriller>));
             using (FileStream fs = new FileStream("thrillers.xml", FileMode.OpenOrCreate))
             {
-                /*List<Thriller>*/ listOfThrillers = (List<Thriller>)formatter3.Deserialize(fs);
+                List<Thriller> listOfThrillers = (List<Thriller>)formatter3.Deserialize(fs);
                 foreach (Thriller current in listOfThrillers)
                 {
                     num++;
@@ -562,7 +558,7 @@ namespace Films
             }
             if(!flagFind)
                 MessageBox.Show("Фильма с таким названием в списке нет");
-            objectBox.Text = "";
+
         }
     }
 }
