@@ -14,6 +14,7 @@ namespace Films
             get { return name; }
             set { name = value; }
         }
+        
         /*public void setName(string name)
         {
             this.name = name;
@@ -78,5 +79,8 @@ namespace Films
         {
             return feature;
         }*/
+        public Film()
+        {
+        }
     }
 }

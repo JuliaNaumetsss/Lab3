@@ -6,12 +6,7 @@
     <Director>Кеннет Брана</Director>
     <Producer>Саймон Кинберг, Дэвид Баррон</Producer>
     <Feature>Мелодрама</Feature>
-  </Melodrama>
-  <Melodrama>
-    <Name>Вселенная Стивена Хокинга</Name>
-    <Year>2014</Year>
-    <Director>Джеймс Марш</Director>
-    <Producer>Тим Беван, Лиза Брюс, Эрик Феллнер</Producer>
-    <Feature>Мелодрама</Feature>
+    <Actors>Лили Джеймс, Ричард Мэдден, Хелена Бонэм Картер</Actors>
+    <CountOfPart>1</CountOfPart>
   </Melodrama>
 </ArrayOfMelodrama>

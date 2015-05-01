@@ -295,23 +295,12 @@ namespace Films
         }
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            bool flagFind = false;
-            if((listOfObjects.SelectedItem=="")||(listOfObjects.SelectedItem==null))
-            {
-                flagFind = true;
-                MessageBox.Show("Выберете фильм для редактирования!");
-            }
             int x;
             if (textBoxYear.Text != "")
             {
                 x = Convert.ToInt32(textBoxYear.Text);
                 if (x > 2015 || x < 1900)
                     MessageBox.Show("Введите год в диапазоне от 1900 до 2015");
-            }
-            if((textBoxYear.Text=="")&&(textBoxProducer.Text=="")&&(textBoxDirector.Text=="")&&(textBoxPath.Text==""))
-            {
-                flagFind = true;
-                MessageBox.Show("Заполните хотя бы одно поле редактирования!");
             }
           /*  if (comboBoxThriller.SelectedItem != null)
             {
@@ -361,78 +350,63 @@ namespace Films
                 listBox1.Items.Add("ОБЪЕКТ КЛАССА МУЛЬТФИЛЬМ ИЗМЕНЁН");
                 cleanFunction();
             }*/
-            if (!flagFind)
+            foreach(Cartoons current in listOfCartoons)
             {
-                foreach (Cartoons current in listOfCartoons)
+                if(current.Name== listOfObjects.SelectedItem)
                 {
-                    if (current.Name == listOfObjects.SelectedItem)
-                    {
-                        editFunction(current);
-                        listBox1.Items.Add("-------------------------------");
-                        Information(current);
-                        listBox1.Items.Add("Продолжительность: " + current.Duration);
-                        listBox1.Items.Add("Роли озвучивали: " + current.VoiceOfTheFilm);
-                        listBox1.Items.Add("ОБЪЕКТ КЛАССА МУЛЬТФИЛЬМ ИЗМЕНЁН");
-                        cleanFunction();
-                        flagFind = true;
-                        break;
-                    }
+                    editFunction(current);
+                    listBox1.Items.Add("-------------------------------");
+                    Information(current);
+                    listBox1.Items.Add("Продолжительность: " + current.Duration);
+                    listBox1.Items.Add("Роли озвучивали: " + current.VoiceOfTheFilm);
+                    listBox1.Items.Add("ОБЪЕКТ КЛАССА МУЛЬТФИЛЬМ ИЗМЕНЁН");
+                    cleanFunction();
+                    break;
                 }
             }
-            if (!flagFind)
+            foreach(Fiction current in listOfFictions)
             {
-                foreach (Fiction current in listOfFictions)
+                if(current.Name==listOfObjects.SelectedItem)
                 {
-                    if (current.Name == listOfObjects.SelectedItem)
-                    {
-                        editFunction(current);
-                        listBox1.Items.Add("-------------------------------");
-                        Information(current);
-                        listBox1.Items.Add("Кассовый сбор: " + current.BoxOffice);
-                        listBox1.Items.Add("Роли озвучивали: " + current.VoiceOfTheFilm);
-                        listBox1.Items.Add("ОБЪЕКТ КЛАССА ФАНТАСТИКА ИЗМЕНЁН");
-                        cleanFunction();
-                        flagFind = true;
-                        break;
-                    }
+                    editFunction(current);
+                    listBox1.Items.Add("-------------------------------");
+                    Information(current);
+                    listBox1.Items.Add("Кассовый сбор: " + current.BoxOffice);
+                    listBox1.Items.Add("Роли озвучивали: " + current.VoiceOfTheFilm);
+                    listBox1.Items.Add("ОБЪЕКТ КЛАССА ФАНТАСТИКА ИЗМЕНЁН");
+                    cleanFunction();
+                    break;
                 }
             }
-            if (!flagFind)
+            foreach(Melodrama current in listOfMelodrams)
             {
-                foreach (Melodrama current in listOfMelodrams)
+                if(current.Name==listOfObjects.SelectedItem)
                 {
-                    if (current.Name == listOfObjects.SelectedItem)
-                    {
-                        editFunction(current);
-                        listBox1.Items.Add("-------------------------------");
-                        Information(current);
-                        listBox1.Items.Add("Количество частей: " + current.CountOfPart);
-                        listBox1.Items.Add("Актёры: " + current.Actors);
-                        listBox1.Items.Add("ОБЪЕКТ КЛАССА МЕЛОДРАМА ИЗМЕНЁН");
-                        cleanFunction();
-                        flagFind = true;
-                        break;
-                    }
+                    editFunction(current);
+                    listBox1.Items.Add("-------------------------------");
+                    Information(current);
+                    listBox1.Items.Add("Количество частей: " + current.CountOfPart);
+                    listBox1.Items.Add("Актёры: " + current.Actors);
+                    listBox1.Items.Add("ОБЪЕКТ КЛАССА МЕЛОДРАМА ИЗМЕНЁН");
+                    cleanFunction();
+                    break;
                 }
             }
-            if (!flagFind)
+            foreach(Thriller current in listOfThrillers)
             {
-                foreach (Thriller current in listOfThrillers)
+                if(current.Name==listOfObjects.SelectedItem)
                 {
-                    if (current.Name == listOfObjects.SelectedItem)
-                    {
-                        editFunction(current);
-                        listBox1.Items.Add("-------------------------------");
-                        Information(current);
-                        listBox1.Items.Add("Бюджет: " + current.Budget);
-                        listBox1.Items.Add("Актёры: " + current.Actors);
-                        listBox1.Items.Add("ОБЪЕКТ КЛАССА ТРИЛЛЕР ИЗМЕНЁН");
-                        cleanFunction();
-                        flagFind = true;
-                        break;
-                    }
+                    editFunction(current);
+                    listBox1.Items.Add("-------------------------------");
+                    Information(current);
+                    listBox1.Items.Add("Бюджет: " + current.Budget);
+                    listBox1.Items.Add("Актёры: " + current.Actors);
+                    listBox1.Items.Add("ОБЪЕКТ КЛАССА ТРИЛЛЕР ИЗМЕНЁН");
+                    cleanFunction();
+                    break;
                 }
             }
+            
         }
 
         private void objectsProperty_Click(object sender, EventArgs e)

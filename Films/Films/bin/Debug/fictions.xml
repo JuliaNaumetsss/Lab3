@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <ArrayOfFiction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Fiction>
-    <Name>Голодные игры</Name>
+    <Name>Интерстеллар</Name>
     <Year>2014</Year>
-    <Director>Френсис Лоуренс</Director>
-    <Producer>Нина Джейкобсон, Джон Килик</Producer>
+    <Director>Кристофер Нолан</Director>
+    <Producer>Кристофер Нолан, Эмма Томас, Линда Обст</Producer>
     <Feature>Фантастика</Feature>
-    <VoiceOfTheFilm>Дженнифер Лоуренс, Джош Хатчерсон, Лиам Хемсворт</VoiceOfTheFilm>
+    <VoiceOfTheFilm>Мэттью Макконахи, Энн Хэтэуэй</VoiceOfTheFilm>
+    <BoxOffice>672 млн</BoxOffice>
   </Fiction>
 </ArrayOfFiction>

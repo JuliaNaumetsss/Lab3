@@ -12,13 +12,18 @@ namespace Films
         public Grown()
         {
         }
-        public void setActors(string actors)
+       /* public void setActors(string actors)
         {
             this.actors = actors;
         }
         public string getActors()
         {
             return actors;
+        }*/
+        public string Actors
+        {
+            get { return actors; }
+            set { actors = value; }
         }
     }
 }

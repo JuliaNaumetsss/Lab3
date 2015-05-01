@@ -1,10 +1,12 @@
 <?xml version="1.0"?>
 <ArrayOfThriller xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Thriller>
-    <Name>Охотники за разумом</Name>
-    <Year>2004</Year>
-    <Director>Ренни Харлин</Director>
-    <Producer>Мориц Борман, Кэри Брокау</Producer>
+    <Name>Остров проклятых</Name>
+    <Year>2010</Year>
+    <Director>Мартин Скорсезе</Director>
+    <Producer>Майк Медавой</Producer>
     <Feature>Триллер</Feature>
+    <Actors>Леонардо Ди Каприо, Марк Руффало,Эмили Мортимер</Actors>
+    <Budget>80 млн</Budget>
   </Thriller>
 </ArrayOfThriller>

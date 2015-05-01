@@ -39,6 +39,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listOfObjects = new System.Windows.Forms.ComboBox();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.labelPath = new System.Windows.Forms.Label();
             this.labelDirector = new System.Windows.Forms.Label();
@@ -142,7 +143,7 @@
             "Интерстеллар",
             "Путешествие к центру земли",
             "Голодные игры"});
-            this.comboBoxFiction.Location = new System.Drawing.Point(137, 101);
+            this.comboBoxFiction.Location = new System.Drawing.Point(138, 101);
             this.comboBoxFiction.Name = "comboBoxFiction";
             this.comboBoxFiction.Size = new System.Drawing.Size(161, 21);
             this.comboBoxFiction.TabIndex = 7;
@@ -180,9 +181,19 @@
             this.panel1.Size = new System.Drawing.Size(400, 130);
             this.panel1.TabIndex = 10;
             // 
+            // listOfObjects
+            // 
+            this.listOfObjects.FormattingEnabled = true;
+            this.listOfObjects.Items.AddRange(new object[] {
+            ""});
+            this.listOfObjects.Location = new System.Drawing.Point(253, 411);
+            this.listOfObjects.Name = "listOfObjects";
+            this.listOfObjects.Size = new System.Drawing.Size(121, 21);
+            this.listOfObjects.TabIndex = 17;
+            // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(125, 95);
+            this.buttonEdit.Location = new System.Drawing.Point(6, 95);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(136, 23);
             this.buttonEdit.TabIndex = 9;
@@ -269,7 +280,7 @@
             // 
             // objectsProperty
             // 
-            this.objectsProperty.Location = new System.Drawing.Point(815, 275);
+            this.objectsProperty.Location = new System.Drawing.Point(877, 275);
             this.objectsProperty.Name = "objectsProperty";
             this.objectsProperty.Size = new System.Drawing.Size(111, 44);
             this.objectsProperty.TabIndex = 11;
@@ -282,12 +293,12 @@
             this.informationBox.FormattingEnabled = true;
             this.informationBox.Location = new System.Drawing.Point(418, 275);
             this.informationBox.Name = "informationBox";
-            this.informationBox.Size = new System.Drawing.Size(391, 186);
+            this.informationBox.Size = new System.Drawing.Size(439, 186);
             this.informationBox.TabIndex = 12;
             // 
             // Serialization
             // 
-            this.Serialization.Location = new System.Drawing.Point(815, 344);
+            this.Serialization.Location = new System.Drawing.Point(877, 357);
             this.Serialization.Name = "Serialization";
             this.Serialization.Size = new System.Drawing.Size(111, 36);
             this.Serialization.TabIndex = 13;
@@ -297,7 +308,7 @@
             // 
             // Deserialization
             // 
-            this.Deserialization.Location = new System.Drawing.Point(815, 413);
+            this.Deserialization.Location = new System.Drawing.Point(877, 421);
             this.Deserialization.Name = "Deserialization";
             this.Deserialization.Size = new System.Drawing.Size(111, 32);
             this.Deserialization.TabIndex = 14;
@@ -319,14 +330,15 @@
             // 
             this.objectBox.Location = new System.Drawing.Point(94, 433);
             this.objectBox.Name = "objectBox";
-            this.objectBox.Size = new System.Drawing.Size(224, 20);
+            this.objectBox.Size = new System.Drawing.Size(135, 20);
             this.objectBox.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 468);
+            this.ClientSize = new System.Drawing.Size(1000, 482);
+            this.Controls.Add(this.listOfObjects);
             this.Controls.Add(this.objectBox);
             this.Controls.Add(this.DeleteObject);
             this.Controls.Add(this.Deserialization);
@@ -383,6 +395,7 @@
         private System.Windows.Forms.Button Deserialization;
         private System.Windows.Forms.Button DeleteObject;
         private System.Windows.Forms.TextBox objectBox;
+        private System.Windows.Forms.ComboBox listOfObjects;
     }
 }
 
