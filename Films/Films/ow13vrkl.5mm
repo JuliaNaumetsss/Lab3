@@ -15,7 +15,6 @@ namespace Films
     public partial class Form1 : Form
     {
         public int countOfObjects = 0;
-        public int newCount = 0;
         List<Thriller> listOfThrillers = new List<Thriller>();
         List<Melodrama> listOfMelodrams = new List<Melodrama>();
         List<Cartoons> listOfCartoons = new List<Cartoons>();
@@ -496,7 +495,6 @@ namespace Films
             {
                 formatter3.Serialize(fs, listOfMelodrams);
             }
-            newCount = countOfObjects;
         }
 
         private void Deserialization_Click(object sender, EventArgs e)
@@ -566,7 +564,6 @@ namespace Films
 
                 }
             }
-            countOfObjects = newCount;
         }
 
         private void DeleteObject_Click(object sender, EventArgs e)
@@ -580,7 +577,6 @@ namespace Films
                 listOfMelodrams.Remove(listOfMelodrams[i]);
                 flagFind = true;
                 MessageBox.Show("Фильм " + listOfObjects.SelectedItem + "  удалён");
-                countOfObjects--;
             }
             if(!flagFind)
             {
@@ -590,7 +586,6 @@ namespace Films
                     listOfFictions.Remove(listOfFictions[i]);
                     flagFind = true;
                     MessageBox.Show("Фильм " + listOfObjects.SelectedItem + "  удалён");
-                    countOfObjects--;
                 }
             }
             if(!flagFind)
@@ -601,7 +596,6 @@ namespace Films
                     listOfCartoons.Remove(listOfCartoons[i]);
                     flagFind = true;
                     MessageBox.Show("Фильм " + listOfObjects.SelectedItem + "  удалён");
-                    countOfObjects--;
                 }
             }
             if(!flagFind)
@@ -612,38 +606,11 @@ namespace Films
                     listOfThrillers.Remove(listOfThrillers[i]);
                     flagFind = true;
                     MessageBox.Show("Фильм " + listOfObjects.SelectedItem + "  удалён");
-                    countOfObjects--;
                 }
             }
             if(!flagFind)
                 MessageBox.Show("Вы ничего не выбрали!!!");
             listOfObjects.Items.Remove(listOfObjects.SelectedItem);
-        }
-
-        private void cleanInformationBox_Click(object sender, EventArgs e)
-        {
-            informationBox.Items.Clear();
-        }
-
-        private void buttonClean_Click(object sender, EventArgs e)
-        {
-            listBox1.Items.Clear();
-            comboBoxThriller.SelectedItem = null;
-            comboBoxMelodrama.SelectedItem = null;
-            comboBoxFiction.SelectedItem = null;
-            comboBoxCartoon.SelectedItem = null;
-            listOfObjects.SelectedItem = null;
-            pictureBox1.ImageLocation = "";
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
         }
     }
 }

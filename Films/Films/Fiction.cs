@@ -18,13 +18,5 @@ namespace Films
         public Fiction()
         {
         }
-       /* public void setBoxOffice(string boxOffice)
-        {
-            this.boxOffice = boxOffice;
-        }
-        public string getBoxOffice()
-        {
-            return boxOffice;
-        }*/
     }
 }

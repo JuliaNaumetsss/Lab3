@@ -17,13 +17,5 @@ namespace Films
         public Melodrama()
         { 
         }
-        /*public void setCountOfPart(int countOfPart)
-        {
-            this.countOfPart = countOfPart;
-        }
-        public int getCountOfPart()
-        {
-            return countOfPart;
-        }*/
     }
 }

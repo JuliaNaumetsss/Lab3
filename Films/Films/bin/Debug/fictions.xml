@@ -1,12 +1,2 @@
 <?xml version="1.0"?>
-<ArrayOfFiction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Fiction>
-    <Name>Интерстеллар</Name>
-    <Year>2014</Year>
-    <Director>Кристофер Нолан</Director>
-    <Producer>Кристофер Нолан, Эмма Томас, Линда Обст</Producer>
-    <Feature>Фантастика</Feature>
-    <VoiceOfTheFilm>Мэттью Макконахи, Энн Хэтэуэй</VoiceOfTheFilm>
-    <BoxOffice>672 млн</BoxOffice>
-  </Fiction>
-</ArrayOfFiction>
+<ArrayOfFiction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />

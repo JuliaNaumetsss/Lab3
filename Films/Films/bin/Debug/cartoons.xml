@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <ArrayOfCartoons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Cartoons>
-    <Name>Гадкий я</Name>
+    <Name>Как приручить дракона</Name>
     <Year>2010</Year>
-    <Director>Пьер Коффин, Крис Рено</Director>
-    <Producer>Джон Коэн, Крис Меледандри, Джанет Хили</Producer>
+    <Director>Крис Сандерс, Дин Деблуа</Director>
+    <Producer>Бонни Арнольд</Producer>
     <Feature>Мультфильм</Feature>
-    <VoiceOfTheFilm>Стив Карелл, Джейсон Сигел, Джули Эндрюс</VoiceOfTheFilm>
-    <Duration>95 мин</Duration>
+    <VoiceOfTheFilm>Джей Барушель, Америка Феррера, Джерард Батлер</VoiceOfTheFilm>
+    <Duration>98 мин</Duration>
   </Cartoons>
 </ArrayOfCartoons>

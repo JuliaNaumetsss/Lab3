@@ -15,7 +15,6 @@ namespace Films
     public partial class Form1 : Form
     {
         public int countOfObjects = 0;
-        public int newCount = 0;
         List<Thriller> listOfThrillers = new List<Thriller>();
         List<Melodrama> listOfMelodrams = new List<Melodrama>();
         List<Cartoons> listOfCartoons = new List<Cartoons>();
@@ -399,7 +398,7 @@ namespace Films
                 }
             }
         }
-        // display information about created objects on the screen
+
         private void objectsProperty_Click(object sender, EventArgs e)
         {
             int number = 0;
@@ -458,6 +457,7 @@ namespace Films
         {
 
             textBoxYear.MaxLength = 4;
+
         }
 
         private void textBoxProducer_TextChanged(object sender, EventArgs e)
@@ -469,7 +469,7 @@ namespace Films
         {
             textBoxDirector.MaxLength = 30;
         }
-        //serelization xml-file
+
         private void Serialization_Click(object sender, EventArgs e)
         {
             File.Delete(@"cartoons.xml");
@@ -496,7 +496,6 @@ namespace Films
             {
                 formatter3.Serialize(fs, listOfMelodrams);
             }
-            newCount = countOfObjects;
         }
 
         private void Deserialization_Click(object sender, EventArgs e)
@@ -509,7 +508,7 @@ namespace Films
             XmlSerializer formatter = new XmlSerializer(typeof(List<Cartoons>));
             using (FileStream fs = new FileStream("cartoons.xml", FileMode.OpenOrCreate))
             {
-                listOfCartoons = (List<Cartoons>)formatter.Deserialize(fs);
+               /* List<Cartoons> */listOfCartoons = (List<Cartoons>)formatter.Deserialize(fs);
                 foreach (Cartoons current in listOfCartoons)
                 {
                     num++;
@@ -524,7 +523,7 @@ namespace Films
             XmlSerializer formatter1 = new XmlSerializer(typeof(List<Fiction>));
             using (FileStream fs = new FileStream("fictions.xml", FileMode.OpenOrCreate))
             {
-                listOfFictions  = (List<Fiction>)formatter1.Deserialize(fs);
+                /*List<Fiction>*/ listOfFictions  = (List<Fiction>)formatter1.Deserialize(fs);
                 foreach (Fiction current in listOfFictions)
                 {
                     num++;
@@ -539,7 +538,7 @@ namespace Films
             XmlSerializer formatter2 = new XmlSerializer(typeof(List<Melodrama>));
             using (FileStream fs = new FileStream("melodrams.xml", FileMode.OpenOrCreate))
             {
-                listOfMelodrams = (List<Melodrama>)formatter2.Deserialize(fs);
+                /*List<Melodrama>*/ listOfMelodrams = (List<Melodrama>)formatter2.Deserialize(fs);
                 foreach (Melodrama current in listOfMelodrams)
                 {
                     num++;
@@ -554,7 +553,7 @@ namespace Films
            XmlSerializer formatter3 = new XmlSerializer(typeof(List<Thriller>));
             using (FileStream fs = new FileStream("thrillers.xml", FileMode.OpenOrCreate))
             {
-                listOfThrillers = (List<Thriller>)formatter3.Deserialize(fs);
+                /*List<Thriller>*/ listOfThrillers = (List<Thriller>)formatter3.Deserialize(fs);
                 foreach (Thriller current in listOfThrillers)
                 {
                     num++;
@@ -566,22 +565,21 @@ namespace Films
 
                 }
             }
-            countOfObjects = newCount;
         }
 
         private void DeleteObject_Click(object sender, EventArgs e)
         {
-            //find in what lists situated choosen films
             int i;
             bool flagFind = false;
-            i = listOfMelodrams.FindIndex(item => item.Name == listOfObjects.SelectedItem);
-            if (i > -1)
-            {
-                listOfMelodrams.Remove(listOfMelodrams[i]);
-                flagFind = true;
-                MessageBox.Show("Фильм " + listOfObjects.SelectedItem + "  удалён");
-                countOfObjects--;
-            }
+            //Melodrama film = new Melodrama();
+           //film =  listOfMelodrams.Find(item => item.name == objectBox.Text);
+           i = listOfMelodrams.FindIndex(item => item.Name == listOfObjects.SelectedItem);
+           if (i > -1)
+           {
+               listOfMelodrams.Remove(listOfMelodrams[i]);
+               flagFind = true;
+               MessageBox.Show("Фильм " + listOfObjects.SelectedItem + "  удалён");
+           }
             if(!flagFind)
             {
                 i = listOfFictions.FindIndex(item => item.Name == listOfObjects.SelectedItem);
@@ -590,7 +588,6 @@ namespace Films
                     listOfFictions.Remove(listOfFictions[i]);
                     flagFind = true;
                     MessageBox.Show("Фильм " + listOfObjects.SelectedItem + "  удалён");
-                    countOfObjects--;
                 }
             }
             if(!flagFind)
@@ -601,7 +598,6 @@ namespace Films
                     listOfCartoons.Remove(listOfCartoons[i]);
                     flagFind = true;
                     MessageBox.Show("Фильм " + listOfObjects.SelectedItem + "  удалён");
-                    countOfObjects--;
                 }
             }
             if(!flagFind)
@@ -612,38 +608,11 @@ namespace Films
                     listOfThrillers.Remove(listOfThrillers[i]);
                     flagFind = true;
                     MessageBox.Show("Фильм " + listOfObjects.SelectedItem + "  удалён");
-                    countOfObjects--;
                 }
             }
             if(!flagFind)
                 MessageBox.Show("Вы ничего не выбрали!!!");
             listOfObjects.Items.Remove(listOfObjects.SelectedItem);
-        }
-
-        private void cleanInformationBox_Click(object sender, EventArgs e)
-        {
-            informationBox.Items.Clear();
-        }
-
-        private void buttonClean_Click(object sender, EventArgs e)
-        {
-            listBox1.Items.Clear();
-            comboBoxThriller.SelectedItem = null;
-            comboBoxMelodrama.SelectedItem = null;
-            comboBoxFiction.SelectedItem = null;
-            comboBoxCartoon.SelectedItem = null;
-            listOfObjects.SelectedItem = null;
-            pictureBox1.ImageLocation = "";
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
         }
     }
 }

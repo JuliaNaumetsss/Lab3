@@ -18,15 +18,5 @@ namespace Films
          public Cartoons()
          {
          }
-         // initilization
-        /* public void setDuration(string duration)
-         {
-             this.duration = duration;
-         }
-         //получение значений
-         public string getDuration()
-         {
-             return duration;
-         }*/
     }
 }

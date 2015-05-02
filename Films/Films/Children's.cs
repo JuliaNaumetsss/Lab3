@@ -17,13 +17,5 @@ namespace Films
         public Children_s()
         {
         }
-       /* public void setVoiceOfTheFilm(string voice)
-        {
-            this.voiceOfTheFilm = voice;
-        }
-        public string getVoiceOfTheFilm()
-        {
-            return voiceOfTheFilm;
-        }*/
     }
 }

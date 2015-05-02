@@ -640,10 +640,5 @@ namespace Films
         {
 
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-        }
     }
 }
